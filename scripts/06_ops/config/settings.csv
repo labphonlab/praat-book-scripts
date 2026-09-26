@@ -1,0 +1,10 @@
+key,value,note
+input_root,../../sample/bySpeaker,話者フォルダの親。相対パスならこのパックからの相対
+output_dir,../../results/ops,測定結果の書き出し先
+measure_at_relative,0.5,母音のどこで測るか（0〜1）
+formant_n,5,LPCで探すフォルマント数
+f1_plausible_min,200,これを下回るF1に要確認の印を付ける
+f1_plausible_max,1100,これを上回るF1に要確認の印を付ける
+f2_plausible_min,600,これを下回るF2に要確認の印を付ける
+f2_plausible_max,3000,これを上回るF2に要確認の印を付ける
+max_bandwidth_ratio,0.5,B1/F1がこれを超えたら要確認

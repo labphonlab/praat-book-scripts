@@ -1,0 +1,20 @@
+{
+  "_note": "book/ のスクリプトのうち、バッチ実行で検証できないものを理由付きで記録する。自動判定に頼ると分類の根拠が残らないため、明示的に書く。",
+  "interactive": {
+    "cejc_open.praat": "View & Edit で編集ウィンドウを開く。画面操作が前提",
+    "longsound_basic.praat": "View & Edit で LongSound を開く。画面操作が前提",
+    "version_guard.praat": "pause で利用者の確認を待つ"
+  },
+  "excerpt": {
+    "session_log.praat": "vowel_extractor.praat に挿入する手続き。単体では変数が未定義",
+    "procedure_example.praat": "手続きの書き方を示す例。固定パス audio/sp01.wav を参照",
+    "utilities.praat": "他スクリプトから include して使う手続き集",
+    "10_1_textgrid_basics.praat": "本文の説明用。textgrids/sp01_vowel.TextGrid は書籍の例示パス",
+    "10_1_interval_traversal.praat": "同上",
+    "10_3_pointtier.praat": "本文の説明用。textgrids/sp01_prosody.TextGrid は例示パス",
+    "longsound_batch.praat": "corpus.wav は例示パス。実データを指す前提",
+    "longsound_extract.praat": "同上",
+    "two_panel_figure.praat": "audio/sp01_sentence.wav は例示パス",
+    "script_8_1_filelist.praat": "/Users/username/audio という例示パスを含む"
+  }
+}

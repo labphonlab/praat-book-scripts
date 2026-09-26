@@ -1,0 +1,21 @@
+{
+  "_note": "自動推測では正しい入力を渡せないスクリプトを、理由付きで明示する。",
+  "vot_measure.praat": {
+    "args": ["{FX}/in/vot_measure/", "2", "3", "{FX}/out/vot.csv"],
+    "why": "層2と層3が点層であるTextGridを要求する"
+  },
+  "vot_continuum.praat": {
+    "args": ["{FX}/audio/spk1_a.wav", "{FX}/in/vot_base.TextGrid", "1", "2", "5",
+             "10", "50", "{FX}/out/vot_stim/"],
+    "why": "層1=点層(破裂)・層2=区間層(母音)という構成を要求する"
+  },
+  "mfc_to_r.praat": {
+    "args": ["{FX}/in/mfc_result.Table", "sp01", "1", "condition_A",
+             "150", "5000", "{FX}/out/mfc_clean.csv"],
+    "why": "CSVではなくPraatのTableファイルを読む"
+  },
+  "session_init.praat": {
+    "args": ["sp01", "1", "condition_A", "researcher", "{FX}/out/proj/"],
+    "why": "participants/<id>/ が既にあることを前提に書き込む"
+  }
+}

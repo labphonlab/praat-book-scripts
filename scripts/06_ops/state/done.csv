@@ -1,0 +1,10 @@
+step,speaker,file
+measure,spk1,spk1_a.wav
+measure,spk1,spk1_i.wav
+measure,spk1,spk1_u.wav
+measure,spk2,spk2_a.wav
+measure,spk2,spk2_i.wav
+measure,spk2,spk2_u.wav
+measure,spk3,spk3_a.wav
+measure,spk3,spk3_i.wav
+measure,spk3,spk3_u.wav

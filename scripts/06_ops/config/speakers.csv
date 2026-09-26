@@ -1,0 +1,4 @@
+speaker,pitch_floor,pitch_ceiling,max_formant,note
+spk1,75,300,5000,成人男性想定
+spk2,120,450,5500,成人女性想定
+spk3,90,350,5200,中間

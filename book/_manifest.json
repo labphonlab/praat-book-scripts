@@ -1,0 +1,366 @@
+[
+ {
+  "file": "wav_list_to_csv.praat",
+  "id": "A-1",
+  "script": null,
+  "chapter": "appendix_A",
+  "title": "WAVファイル一覧をCSVに書き出す"
+ },
+ {
+  "file": "f0_batch_stats.praat",
+  "id": "A-11",
+  "script": null,
+  "chapter": "appendix_A",
+  "title": "F0の基本統計量を全ファイルで一括抽出する"
+ },
+ {
+  "file": "formant_batch_midpoint.praat",
+  "id": "A-19",
+  "script": null,
+  "chapter": "appendix_A",
+  "title": "母音の中点でF1・F2・F3を一括抽出する"
+ },
+ {
+  "file": "textgrid_label_count.praat",
+  "id": "A-27",
+  "script": null,
+  "chapter": "appendix_A",
+  "title": "TextGridの全ラベル出現頻度を集計する"
+ },
+ {
+  "file": "annotated_spectrogram_pdf.praat",
+  "id": "A-35",
+  "script": null,
+  "chapter": "appendix_A",
+  "title": "注釈付きスペクトログラムをPDFで一括出力する"
+ },
+ {
+  "file": "longsound_basic.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch01",
+  "title": "基本的な使い方"
+ },
+ {
+  "file": "longsound_extract.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch01",
+  "title": "区間を抽出してSoundとして処理する（省メモリパターン）"
+ },
+ {
+  "file": "longsound_batch.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch01",
+  "title": "バッチ処理への応用"
+ },
+ {
+  "file": "version_check.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch01",
+  "title": "Script 1.1：バージョン確認スクリプト"
+ },
+ {
+  "file": "version_guard.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch01",
+  "title": "Script 1.2：バージョンガード付きスクリプトの骨格"
+ },
+ {
+  "file": "pitch_stats_batch.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch02",
+  "title": "Script 2.1：F0統計量一括抽出（mean/SD/voiced fraction）"
+ },
+ {
+  "file": "report_pitch_parameters.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch02",
+  "title": "Script 2.2：論文用パラメータ記述の自動生成"
+ },
+ {
+  "file": "formant_batch.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch03",
+  "title": "Script 3.1：母音区間のF1・F2・F3を一括抽出"
+ },
+ {
+  "file": "formant_bw_filter.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch03",
+  "title": "Script 3.2：bandwidthフィルタリング付き抽出"
+ },
+ {
+  "file": "vot_measure.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch04",
+  "title": "VOTの測定方法"
+ },
+ {
+  "file": "spectrogram_settings_report.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch04",
+  "title": "Script 4.1：設定を記録して論文用記述を生成する"
+ },
+ {
+  "file": "spectrogram_export_batch.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch04",
+  "title": "Script 4.2：スペクトログラム＋TextGridをPDFで一括出力する"
+ },
+ {
+  "file": "reliability_intra.praat",
+  "id": null,
+  "script": "5.1",
+  "chapter": "ch05",
+  "title": "Script 5.1：intra-rater ICC・κ計算スクリプト"
+ },
+ {
+  "file": "reliability_inter.praat",
+  "id": null,
+  "script": "5.1",
+  "chapter": "ch05",
+  "title": "Script 5.2：inter-rater境界一致率スクリプト"
+ },
+ {
+  "file": "boundary_diff_export.praat",
+  "id": null,
+  "script": "5.1",
+  "chapter": "ch05",
+  "title": "Script 5.3：境界位置差分のCSV出力"
+ },
+ {
+  "file": "disfluency_count.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch07",
+  "title": "Script 7.1：非流暢性の頻度を自動計測する"
+ },
+ {
+  "file": "speech_rate_batch.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch07",
+  "title": "Script 7.2：発話速度を一括計算する"
+ },
+ {
+  "file": "cejc_open.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch07",
+  "title": "PraatでのCEJCファイルの読み込み"
+ },
+ {
+  "file": "script_8_1_filelist.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch08",
+  "title": "Script 8.1：最小構成batch（全WAVのファイル名を表示する）"
+ },
+ {
+  "file": "script_8_2_duration.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch08",
+  "title": "Script 8.2：duration一括計測（CSVに出力する）"
+ },
+ {
+  "file": "script_8_3_pitch_batch.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch08",
+  "title": "Script 8.3：pitch一括抽出（TextGridとの連携）"
+ },
+ {
+  "file": "script_8_4_batch_full.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch08",
+  "title": "Script 8.4：エラーハンドリング付き完全版batch template"
+ },
+ {
+  "file": "metadata_merge.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch08",
+  "title": "Script 8.5：batch出力にメタデータを自動付加するscript"
+ },
+ {
+  "file": "qa_check.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch08",
+  "title": "Script 8.6：QA自動チェックscript"
+ },
+ {
+  "file": "history_to_script.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch09",
+  "title": "Historyの汎用化"
+ },
+ {
+  "file": "procedure_example.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch09",
+  "title": "procedureの基本構文"
+ },
+ {
+  "file": "utilities.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch09",
+  "title": "実用的なprocedureの例"
+ },
+ {
+  "file": "10_1_textgrid_basics.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch10",
+  "title": "基本操作コマンド一覧"
+ },
+ {
+  "file": "10_1_interval_traversal.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch10",
+  "title": "Script 10.1：全区間の反復処理テンプレート"
+ },
+ {
+  "file": "10_2_tier_cross.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch10",
+  "title": "Script 10.2：tier間照合スクリプト（完全版）"
+ },
+ {
+  "file": "10_3_pointtier.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch10",
+  "title": "PointTierのイベントとIntervalTierの対応"
+ },
+ {
+  "file": "10_3_label_replace.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch10",
+  "title": "Script 10.3：ラベルの一括修正スクリプト"
+ },
+ {
+  "file": "10_4_duration_extract.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch10",
+  "title": "Script 10.4：指定ラベルの持続時間を全ファイルで計測してCSV出力"
+ },
+ {
+  "file": "vowel_extractor.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch11",
+  "title": "Script 11.1の前提条件"
+ },
+ {
+  "file": "session_log.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch12",
+  "title": "セッションログの自動出力"
+ },
+ {
+  "file": "vot_continuum.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch13",
+  "title": "Script 13.1：VOT continuumを自動生成するscript（7ステップ）"
+ },
+ {
+  "file": "f0_continuum.praat",
+  "id": null,
+  "script": "13.2",
+  "chapter": "ch13",
+  "title": "13.5　F0 continuumの作成"
+ },
+ {
+  "file": "randomize_stimuli.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch15",
+  "title": "Script 15.1：制約付きランダム化（ExperimentMFC用刺激リスト生成）"
+ },
+ {
+  "file": "latin_square.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch15",
+  "title": "Script 15.2：参加者番号から条件均等化を決定するスクリプト"
+ },
+ {
+  "file": "session_init.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch15",
+  "title": "Script 15.3：セッション管理ファイルを自動生成するスクリプト"
+ },
+ {
+  "file": "mfc_to_r.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch15",
+  "title": "Script 15.4：ExperimentMFC結果R用CSV変換（完全版）"
+ },
+ {
+  "file": "readme_gen.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch15",
+  "title": "README.txtの自動生成"
+ },
+ {
+  "file": "spectrogram_export.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch16",
+  "title": "Script 16.1：スペクトログラム＋TextGrid overlay をPDFで出力する"
+ },
+ {
+  "file": "vowel_space_plot.praat",
+  "id": null,
+  "script": "16.2",
+  "chapter": "ch16",
+  "title": "Script 16.2：Praatで母音空間図を作成する（比較・確認用）"
+ },
+ {
+  "file": "f0_trajectory_plot.praat",
+  "id": null,
+  "script": "16.2",
+  "chapter": "ch16",
+  "title": "Script 16.3：F0軌跡をCSVから描画する"
+ },
+ {
+  "file": "two_panel_figure.praat",
+  "id": null,
+  "script": "16.2",
+  "chapter": "ch16",
+  "title": "Script 16.4：2パネル図（スペクトログラム＋F0軌跡）"
+ },
+ {
+  "file": "create_research_project.praat",
+  "id": null,
+  "script": null,
+  "chapter": "ch18",
+  "title": "Script 18.1：研究プロジェクト用フォルダ構成を自動生成するPraatスクリプト"
+ }
+]
