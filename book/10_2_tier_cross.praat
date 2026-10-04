@@ -12,8 +12,8 @@ form Tier Cross Extraction
   sentence Textgrid_folder textgrids/
   integer  Phone_tier      1
   integer  Word_tier       2
-  real     Floor           75
-  real     Ceiling        300
+  real     Floor           50
+  real     Top            800
   sentence Output_csv      results/tier_cross.csv
 endform
 
@@ -35,8 +35,8 @@ for i from 1 to n_files
     audio = Read from file: audio_folder$ + filename$
     tg    = Read from file: tgpath$
     selectObject: audio
-    pit   = To Pitch (ac): 0, floor, 15, "no",
-      ... 0.03, 0.45, 0.01, 0.35, 0.14, ceiling
+    pit   = To Pitch (filtered autocorrelation): 0, floor, top, 15, "no",
+      ... 0.03, 0.09, 0.50, 0.055, 0.35, 0.14
 
     selectObject: tg
     n_words = Get number of intervals: word_tier

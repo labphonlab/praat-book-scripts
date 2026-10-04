@@ -12,8 +12,8 @@ form Batch Processing Full
   sentence Output_csv   results/output.csv
   sentence Error_log    results/errors.csv
   sentence Resume_file  results/processed.txt
-  real     Floor        75
-  real     Ceiling     300
+  real     Floor        50
+  real     Top         800
 endform
 
 ; 出力ファイルの初期化
@@ -68,7 +68,7 @@ for i from 1 to n
   ; 「変数 = nocheck コマンド」の形は成功時も代入されないため、
   ; nocheckは代入なしのコマンド単体に付け、成否はnumberOfSelected()で判定する
   selectObject: snd
-  nocheck To Pitch (ac): 0, floor, 15, "no", 0.03, 0.45, 0.01, 0.35, 0.14, ceiling
+  nocheck To Pitch (filtered autocorrelation): 0, floor, top, 15, "no", 0.03, 0.09, 0.50, 0.055, 0.35, 0.14
 
   if numberOfSelected("Pitch") > 0
     pit = selected("Pitch")

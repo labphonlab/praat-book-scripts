@@ -11,8 +11,8 @@ form Pitch Batch Extraction
   sentence Audio_folder    audio/
   sentence Textgrid_folder textgrids/
   integer  Tier            1
-  real     Floor           75
-  real     Ceiling        300
+  real     Floor           50
+  real     Top            800
   sentence Output_csv      results/pitch_batch.csv
 endform
 
@@ -33,8 +33,8 @@ for i from 1 to n
 
     snd = Read from file: audio_folder$ + filename$
     selectObject: snd
-    pit = To Pitch (ac): 0, floor, 15, "no", 0.03, 0.45, 0.01, 0.35, 0.14, ceiling
-    ; `To Pitch (ac)` は自己相関法（autocorrelation）によるPitch推定。詳細は第2章参照
+    pit = To Pitch (filtered autocorrelation): 0, floor, top, 15, "no", 0.03, 0.09, 0.50, 0.055, 0.35, 0.14
+    ; filtered autocorrelation法（本書の標準）。floorの直後の引数がtop。詳細は第2章参照
     tg  = Read from file: tgpath$
     selectObject: tg
     n_int = Get number of intervals: tier

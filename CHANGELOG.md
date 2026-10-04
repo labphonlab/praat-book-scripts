@@ -1,5 +1,10 @@
 # 変更履歴
 
+## 1.0.3 — 2026-10-04
+
+- 書籍掲載スクリプト4本（script_8_3_pitch_batch・script_8_4_batch_full・10_2_tier_cross・vowel_extractor）のPitch分析を、旧式の `To Pitch (ac)` から本書の標準である `To Pitch (filtered autocorrelation)` に変更
+  - フォームの既定値を floor 50 Hz・top 800 Hz（filtered autocorrelation法の既定値）に、変数名を `ceiling` から `top` に変更
+
 ## 1.0.2 — 2026-10-04
 
 - f0_trajectory_plot.praat：横軸ラベルの `%` がPraatで斜体指定と解釈されて表示されなかった不具合を修正（`\% ` と書く）

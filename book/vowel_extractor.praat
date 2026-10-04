@@ -13,8 +13,8 @@ form Vowel Extractor
   integer  Phone_tier         1
   sentence Target_labels      a i u e o
   real     Formant_ceiling    5500
-  real     Pitch_floor        75
-  real     Pitch_ceiling      300
+  real     Pitch_floor        50
+  real     Pitch_top          800
   real     Bw1_threshold      200
   real     Bw2_threshold      300
   sentence Output_csv         results/vowels.csv
@@ -100,8 +100,8 @@ for i from 1 to n_files
     tg      = Read from file: tgpath$
 
     selectObject: snd
-    pit     = To Pitch (ac): 0, pitch_floor, 15, "no",
-      ... 0.03, 0.45, 0.01, 0.35, 0.14, pitch_ceiling
+    pit     = To Pitch (filtered autocorrelation): 0, pitch_floor, pitch_top, 15, "no",
+      ... 0.03, 0.09, 0.50, 0.055, 0.35, 0.14
     selectObject: snd
     fmt     = To Formant (burg): 0, 5, formant_ceiling, 0.025, 50
     selectObject: snd
