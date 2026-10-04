@@ -29,7 +29,10 @@ def main(mdir, outdir):
         # 終端フェンスは行頭のものだけ。文字列の中に ``` を含むコードがあり、
         # 行中の ``` を終端と誤認するとスクリプトが途中で切れる（実際に起きた）。
         for m in re.finditer(r'^```praat\n(.*?)^```\s*$', txt, re.S | re.M):
-            code = m.group(1)
+            # 紙版で省く範囲の印（#@omit-in-print: … / #@end-omit）は書籍の組版用なので落とす。
+            # 配布するのは常に全文。
+            code = "\n".join(l for l in m.group(1).split("\n")
+                             if not re.match(r'\s*#@(omit-in-print:|end-omit)', l))
             first = code.split('\n')[0].strip()
             a, b = PAT_ID.match(first), PAT_FILE.match(first)
             if not (a or b):
