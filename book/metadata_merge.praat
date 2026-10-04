@@ -8,11 +8,11 @@
 # Released under the MIT License. See LICENSE for details.
 
 form Metadata Merge
-  sentence Features_csv    results/features.csv
+  sentence Features_csv    results/output.csv
   sentence Metadata_csv    data/speaker_info.csv
   sentence Output_csv      results/features_with_meta.csv
-  # features CSV の話者ID列名
-  word     Speaker_col     speaker
+  # features CSV のファイル名列（ここから話者IDを取り出す）
+  word     Filename_col    filename
   # metadata CSV のID列名
   word     Meta_id_col     speaker_id
 endform
@@ -51,9 +51,12 @@ n_missing = 0
 
 for i from 1 to n_feat
   selectObject: feat_tbl
-  spk$ = Get value: i, speaker_col$
+  fname$ = Get value: i, filename_col$
+  ; ファイル名の接頭辞（最初の「_」より前）を話者IDとする。「_」がなければ全体を使う
+  us = index(fname$, "_")
+  spk$ = if us > 0 then left$(fname$, us - 1) else fname$ fi
 
-  ; 最も近いmetadataを検索する
+  ; 話者IDが一致するmetadataを検索する
   found = 0
   sex$  = "NA"
   age$  = "NA"
@@ -82,7 +85,7 @@ for i from 1 to n_feat
   if found = 1
     n_merged = n_merged + 1
   else
-    appendInfoLine: "警告: メタデータなし → ", spk$
+    appendInfoLine: "警告: メタデータなし → ", fname$, "（話者ID: ", spk$, "）"
     n_missing = n_missing + 1
   endif
 endfor

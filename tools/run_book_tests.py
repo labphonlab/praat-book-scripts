@@ -49,6 +49,9 @@ OUTISH = ('output', 'out_', 'result', 'save', 'dest', 'export', 'log',
 
 def guess_path(name, default):
     fx = str(FX)
+    # 列名を指定する項目（…_col）は経路ではないので、既定値をそのまま使う
+    if name.endswith('_col'):
+        return default if default else "x"
     if any(k in name for k in OUTISH):
         if 'csv' in name or (default and default.endswith('.csv')):
             return f"{fx}/out/{name}.csv"

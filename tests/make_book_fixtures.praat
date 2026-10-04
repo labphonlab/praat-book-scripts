@@ -125,13 +125,13 @@ removeObject: snd
 # スクリプトの不具合ではなく入力の不備なので、まとめて用意する。
 vow$# = {"a", "i", "u", "e", "o"}
 writeFileLine: outdir$ + "in/table.csv",
-... "id,file,speaker,speaker_id,vowel,sex,age,dialect,status,"
+... "id,file,filename,speaker,speaker_id,vowel,sex,age,dialect,status,"
 ... + "value_t1,value_t2,label_t1,label_t2,f0_mean,f1_mean,f2_mean,"
 ... + "time_norm,duration_ms,stimulus,response,reactionTime"
 for i from 1 to 15
   v$ = vow$# [(i - 1) mod 5 + 1]
   appendFileLine: outdir$ + "in/table.csv",
-  ... "id", i, ",spk", (i mod 3) + 1, "_", v$, ".wav,spk", (i mod 3) + 1, ",spk",
+  ... "id", i, ",spk", (i mod 3) + 1, "_", v$, ".wav,spk", (i mod 3) + 1, "_", v$, ",spk", (i mod 3) + 1, ",spk",
   ... (i mod 3) + 1, ",", v$, ",", if (i mod 2) = 0 then "F" else "M" fi, ",",
   ... 20 + i, ",Tokyo,ok,",
   ... fixed$(500 + i * 7, 2), ",", fixed$(500 + i * 7 + 3, 2), ",", v$, ",", v$, ",",

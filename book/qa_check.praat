@@ -8,7 +8,7 @@
 # Released under the MIT License. See LICENSE for details.
 
 form QA Check
-  sentence Features_csv    results/features.csv
+  sentence Features_csv    results/output.csv
   real     F0_min_hz       50
   real     F0_max_hz       500
   real     Duration_min_ms 10
@@ -96,7 +96,15 @@ if na_pct > na_warn_pct
   appendInfoLine:              "⚠️ 警告: F0 NA率 = ", fixed$(na_pct, 1), "%"
 else
   appendFileLine: report_file$, "✅ F0 NA率は正常範囲内です"
-  appendInfoLine:              "✅ QA完了: 重大な問題なし"
+endif
+
+; NA率・F0範囲外・持続時間異常のいずれかがあれば「問題あり」とする
+if na_pct > na_warn_pct or n_bad_f0 > 0 or n_bad_dur > 0
+  appendFileLine: report_file$, "判定: 問題あり"
+  appendInfoLine:              "⚠️ QA完了: 問題あり（F0 NA率 ", fixed$(na_pct, 1), "% / F0範囲外 ", n_bad_f0, " 件 / 持続時間異常 ", n_bad_dur, " 件）"
+else
+  appendFileLine: report_file$, "判定: 問題なし"
+  appendInfoLine:              "✅ QA完了: 問題なし"
 endif
 
 removeObject: table
