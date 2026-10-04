@@ -8,7 +8,7 @@
 # Released under the MIT License. See LICENSE for details.
 
 form MFC to R Converter
-  sentence Input_table     results/sp01_session01.Table
+  sentence Input_table     sessions/sp01_session01.Table
   sentence Participant_id  sp01
   integer  Session_number  1
   sentence Condition       condition_A

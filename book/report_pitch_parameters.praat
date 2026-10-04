@@ -18,8 +18,10 @@ endform
 
 if time_step = 0
   tstep_str$ = "自動（floor依存）"
+  tstep_en$ = "automatic (0.75 / floor)"
 else
   tstep_str$ = fixed$(time_step, 3) + " s"
+  tstep_en$ = tstep_str$
 endif
 
 appendInfoLine: "=== 論文用記述文 ==="
@@ -34,7 +36,7 @@ appendInfoLine: ""
 appendInfoLine: "【English】"
 appendInfoLine: "F0 was extracted using Praat's filtered autocorrelation method ",
   ... "(pitch floor: ", floor, " Hz, pitch top: ", top, " Hz, ",
-  ... "time step: ", tstep_str$, ", "
+  ... "time step: ", tstep_en$, ", "
 appendInfoLine: "silence threshold: ", silence_threshold,
   ... ", voicing threshold: ", voicing_threshold,
   ... "; Boersma, 1993; Boersma, Weenink & Shchupak, 2026)."

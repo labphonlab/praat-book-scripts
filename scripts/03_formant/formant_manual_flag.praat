@@ -4,9 +4,8 @@
 # 『Praatで学ぶ音声研究の方法』付録A-24（骨格）の完全版
 # https://github.com/labphonlab/praat-book-scripts
 #
-# Copyright (c) 2026 Takeshi Ishihara / 言叢出版
-# 本書の購入者に限り、研究・教育目的での使用および改変を許諾する。
-# 再配布・再公開は不可。詳細は LICENSE を参照。
+# Copyright (c) 2026 Takeshi Ishihara
+# Released under the MIT License. See LICENSE for details.
 
 # ── このスクリプトについて ───────────────────────────────
 # 自動測定の結果に、目視確認が要る箇所の印を付ける。

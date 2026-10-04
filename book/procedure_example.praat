@@ -26,8 +26,12 @@ procedure toNaStr: .val, .decimals
 endproc
 
 ; --- procedureの呼び出し ---
-@checkFile: "audio/sp01.wav"
-@checkFile: "audio/sp02.wav"
+@checkFile: "audio/sp01_a.wav"
+@checkFile: "audio/sp02_a.wav"
 
+basename$   = "sp01_a"
+output_csv$ = "procedure_example.csv"
+mean_f0     = 168.8226
+writeFileLine: output_csv$, "file,mean_f0"
 @toNaStr: mean_f0, 2
 appendFileLine: output_csv$, basename$, ",", toNaStr.result$

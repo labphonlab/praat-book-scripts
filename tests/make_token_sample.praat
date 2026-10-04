@@ -2,8 +2,8 @@
 #
 # 『Praatで学ぶ音声研究の方法』サポートスクリプト集
 # https://github.com/labphonlab/praat-book-scripts
-# Copyright (c) 2026 Takeshi Ishihara / 言叢出版
-# 本書の購入者に限り、研究・教育目的での使用および改変を許諾する。再配布は不可。
+# Copyright (c) 2026 Takeshi Ishihara
+# Released under the MIT License. See LICENSE for details.
 #
 # 3話者 × 3母音 × 5トークンをKlattGrid合成で作る。
 # トークンごとに目標フォルマントを少しずつ変えてある。実際の発話でも

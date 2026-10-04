@@ -28,7 +28,7 @@ procedure safeRead: .path$
 endproc
 
 ; ===== 使用例 =====
-@safeRead: "audio/sp01.wav"
+@safeRead: "audio/sp01_a.wav"
 if safeRead.obj <> 0
   snd = safeRead.obj
   selectObject: snd

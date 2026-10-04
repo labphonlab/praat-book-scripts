@@ -5,9 +5,8 @@
 # 書籍では form の定義のみを示し、本体はここを参照するとしている。
 # https://github.com/labphonlab/praat-book-scripts
 #
-# Copyright (c) 2026 Takeshi Ishihara / 言叢出版
-# 本書の購入者に限り、研究・教育目的での使用および改変を許諾する。
-# 再配布・再公開は不可。詳細は LICENSE を参照。
+# Copyright (c) 2026 Takeshi Ishihara
+# Released under the MIT License. See LICENSE for details.
 
 # ── このスクリプトについて ───────────────────────────────
 # フォルダ内のWAVの音圧をそろえる。知覚実験の刺激作成や、

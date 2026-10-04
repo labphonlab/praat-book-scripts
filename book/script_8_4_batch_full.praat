@@ -65,7 +65,6 @@ for i from 1 to n
   dur = Get total duration
 
   ; Pitch抽出（失敗してもスキップ）
-  ; 「変数 = nocheck コマンド」の形は成功時も代入されないため、
   ; nocheckは代入なしのコマンド単体に付け、成否はnumberOfSelected()で判定する
   selectObject: snd
   nocheck To Pitch (filtered autocorrelation): 0, floor, top, 15, "no", 0.03, 0.09, 0.50, 0.055, 0.35, 0.14

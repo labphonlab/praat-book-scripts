@@ -15,9 +15,11 @@ form Session Initialization
   sentence Project_dir      experiment_project/
 endform
 
-; 参加者フォルダを確認する
+; 参加者フォルダを作る（既にあれば何もしない。createFolderは親フォルダを作らないので1階層ずつ作る）
 participant_dir$ = project_dir$ + "participants/" + participant_id$ + "/"
 session_file$    = participant_dir$ + "session_" + string$(session_number) + ".txt"
+createFolder: project_dir$ + "participants"
+createFolder: participant_dir$
 
 ; セッションファイルを生成する
 writeFileLine: session_file$, "=== Session Information ==="

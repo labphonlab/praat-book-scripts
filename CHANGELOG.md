@@ -1,5 +1,14 @@
 # 変更履歴
 
+## 1.0.4 — 2026-10-04
+
+- 書籍全体の事実確認に合わせて、書籍掲載スクリプト15本を本文から再抽出
+  - 動かなかった箇所の修正：procedure_example（未定義変数）、qa_check（列名の不一致）、session_init（フォルダの作成）、reliability_intra（文字列の書き方）、vowel_space_plot（`Paint circle (mm):` に変更）、session_log（変数名）
+  - 付属データに合わせた修正：10_1_textgrid_basics、cejc_open、utilities、mfc_to_r、readme_gen
+  - 出力やコメントの修正：version_check、report_pitch_parameters、script_8_4_batch_full、create_research_project
+- 骨格の完全版・補助スクリプト・テスト用スクリプト45本の冒頭コメントのライセンス表記を、MIT Licenseに統一（購入者限定の旧表記が残っていた）
+- README・CONTRIBUTINGの実習データの説明を、パスワードなしの実習データZIP（CC BY 4.0）に合わせた
+
 ## 1.0.3 — 2026-10-04
 
 - 書籍掲載スクリプト4本（script_8_3_pitch_batch・script_8_4_batch_full・10_2_tier_cross・vowel_extractor）のPitch分析を、旧式の `To Pitch (ac)` から本書の標準である `To Pitch (filtered autocorrelation)` に変更

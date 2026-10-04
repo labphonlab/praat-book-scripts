@@ -64,8 +64,8 @@ for i from 1 to n_rows
       grey = 0.4
     endif
 
-    # 直径3mm の塗りつぶし円（第1引数が色）
-    Paint circle: grey, f2_hz, f1_hz, 3
+    # 直径3mm の塗りつぶし円（第1引数が色。(mm)付きの方を使う）
+    Paint circle (mm): grey, f2_hz, f1_hz, 3
     Colour: "black"
     Text: f2_hz, "Centre", f1_hz - 40, "Bottom", vowel$
   endif

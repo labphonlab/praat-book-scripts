@@ -12,6 +12,10 @@ selectObject: tg
 
 ; --- Tier情報 ---
 n_tiers = Get number of tiers
+# 区間系のコマンドに使うIntervalTierの番号（付属データではphone tier＝第4層）
+phone_tier = 4
+# TextTierの番号（見つからなければ0のまま）
+tone_tier = 0
 for i from 1 to n_tiers
   selectObject: tg
   tier_name$ = Get tier name: i
@@ -21,32 +25,37 @@ for i from 1 to n_tiers
     tier_type$ = "IntervalTier"
   else
     tier_type$ = "TextTier"
+    tone_tier = i
   endif
   appendInfoLine: "Tier ", i, ": ", tier_name$, " (", tier_type$, ")"
 endfor
 
 ; --- IntervalTierの区間情報 ---
 selectObject: tg
-n_int  = Get number of intervals: 1
-# Tier 1 の第3区間のラベル
-label$ = Get label of interval: 1, 3
+n_int  = Get number of intervals: phone_tier
+# phone tier の第3区間のラベル
+label$ = Get label of interval: phone_tier, 3
 # 開始時刻
-xmin   = Get start time of interval: 1, 3
+xmin   = Get start time of interval: phone_tier, 3
 # 終了時刻
-xmax   = Get end time of interval:   1, 3
+xmax   = Get end time of interval:   phone_tier, 3
 dur    = xmax - xmin
 
 ; --- 時刻から区間番号を逆引きする ---
 # 0.5秒時点の区間番号
-i_at      = Get interval at time: 1, 0.5
+i_at      = Get interval at time: phone_tier, 0.5
 selectObject: tg
-label_at$ = Get label of interval: 1, i_at
+label_at$ = Get label of interval: phone_tier, i_at
 
 ; --- TextTier（PointTier）の点情報 ---
-n_pts    = Get number of points: 3
-# Tier 3 の第1点の時刻
-t_point  = Get time of point:  3, 1
-# 第1点のラベル
-mark$    = Get label of point: 3, 1
+# 付属のsp01_vowel.TextGridにはTextTierがないので、TextTierがある場合だけ実行する
+if tone_tier > 0
+  selectObject: tg
+  n_pts    = Get number of points: tone_tier
+  # TextTier の第1点の時刻
+  t_point  = Get time of point:  tone_tier, 1
+  # 第1点のラベル
+  mark$    = Get label of point: tone_tier, 1
+endif
 
 removeObject: tg

@@ -242,7 +242,7 @@ else
   appendFileLine: output_log$, "注: P_e = 1の場合、κは0/0となり数学的に未定義である（全員が同じ"
   appendFileLine: output_log$, "1カテゴリのみを選んだケースであり、偶然一致と実際の一致を区別できない）。"
   appendFileLine: output_log$, "注: 重み付きκ（順序尺度カテゴリでの近い誤りを軽く扱う版）が必要な"
-  appendFileLine: output_log$, "場合はRの irr::kappa2(weight = \"squared\") 等を使用すること。"
+  appendFileLine: output_log$, "場合はRの irr::kappa2(weight = ""squared"") 等を使用すること。"
 
   removeObject: cat_counts
   appendInfoLine: "κ = ", kappa_str$

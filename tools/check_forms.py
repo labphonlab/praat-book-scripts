@@ -30,8 +30,8 @@ def main():
             bad.append((p, f"form={fields} / 既定値={resolved}"))
         if "defaultDirectory$" not in t:
             bad.append((p, "無設定起動のブロックが無い"))
-        # 配布物の利用条件は購入者限定。全ファイルに表示があることを確かめる。
-        if "購入者に限り" not in t:
+        # 配布物はMIT License。全ファイルにライセンス表示があることを確かめる。
+        if "Released under the MIT License" not in t:
             bad.append((p, "利用条件の表示が無い"))
     n = len(list(ROOT.glob("scripts/*/*.praat")))
     print(f"検査 {n} 本 / 不整合 {len(bad)} 件")

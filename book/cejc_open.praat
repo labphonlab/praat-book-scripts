@@ -7,8 +7,8 @@
 # Copyright (c) 2026 Takeshi Ishihara
 # Released under the MIT License. See LICENSE for details.
 
-snd = Read from file: "cejc/wav/C001_007.wav"
-tg  = Read from file: "cejc/textgrid/C001_007.TextGrid"
+snd = Read from file: "cejc/wav/C001_001_IC01.wav"
+tg  = Read from file: "cejc/intonation/C001_001_IC01-xjtobi.TextGrid"
 selectObject: snd
 plusObject: tg
 View & Edit

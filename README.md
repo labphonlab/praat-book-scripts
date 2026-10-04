@@ -8,7 +8,7 @@
 
 ## 正本と刊行時固定版
 
-この公開リポジトリの **main** ブランチをコードの正本とします。書籍に対応する固定版は [v1.0.3 Release](https://github.com/labphonlab/praat-book-scripts/releases/tag/v1.0.3) から取得できます（v1.0.0からの変更は [CHANGELOG.md](CHANGELOG.md) を参照）。ReleaseにはZIPとSHA-256チェックサムを添付します。
+この公開リポジトリの **main** ブランチをコードの正本とします。書籍に対応する固定版は [v1.0.4 Release](https://github.com/labphonlab/praat-book-scripts/releases/tag/v1.0.4) から取得できます（v1.0.0からの変更は [CHANGELOG.md](CHANGELOG.md) を参照）。ReleaseにはZIPとSHA-256チェックサムを添付します。
 
 ## 使い方
 
@@ -35,7 +35,7 @@ Praat 7.0.02で検証しています。コマンドラインからファイル�
 
 ## コードとデータの分離
 
-この公開リポジトリには、Praatコードと検証用設定だけを収録しています。音声、TextGrid、参加者データ、第三者コーパスは含みません。書籍の実習用データは、書籍に記載された購入者向けZIPから取得してください。自分の研究データを使う場合は、その利用条件と倫理手続きを確認してください。
+この公開リポジトリには、Praatコードと検証用設定だけを収録しています。音声、TextGrid、参加者データ、第三者コーパスは含みません。書籍の実習用データは、[実習データZIP](https://labphonlab.github.io/gensou-shuppan-web/dl/onseigaku-library-1-data.zip)（パスワードなし、CC BY 4.0）から取得してください。自分の研究データを使う場合は、その利用条件と倫理手続きを確認してください。
 
 tests 内の生成スクリプトを使うと、PraatのKlattGridから合成テスト音を作成できます。生成音は実話者の録音ではありません。
 
@@ -43,11 +43,11 @@ tests 内の生成スクリプトを使うと、PraatのKlattGridから合成テ
 
     python tools/validate_repository.py
 
-実データを用いるPraat実行テストは、購入者向けデータまたは自分で生成したテスト音を別途配置して実行します。
+実データを用いるPraat実行テストは、実習データZIPのデータまたは自分で生成したテスト音を別途配置して実行します。
 
 ## ライセンス
 
-本リポジトリのコードと文書はMIT Licenseで公開しています。購入者向けZIPに含まれる素材には、そのZIP内の利用条件が別途適用されます。
+本リポジトリのコードと文書はMIT Licenseで公開しています。実習データZIPの素材にはCC BY 4.0が適用されます（ZIP内のLICENSE.txtを参照）。
 
 ## 正誤・要望
 

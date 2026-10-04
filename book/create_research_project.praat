@@ -16,7 +16,8 @@ endform
 
 base$ = project_dir$ + project_name$ + "/"
 
-; フォルダ構成を作成する（Praatはフォルダ作成コマンドがないためtxtでガイドを生成）
+; フォルダ構成を作成する（Praatには createFolder: があるが、1階層ずつしか作れない。
+; 入れ子のフォルダでは呼び出しを重ねる必要があるため、ここでは手順ガイドをtxtで生成する）
 ; SETUP_GUIDE.txtとREADME_template.mdはproject_dir$直下に書き出す。
 ; base$のフォルダ自体はまだ存在しないため、そこに書き込むとエラーになる。
 ; 実際のフォルダ作成はSETUP_GUIDE.txtの指示に従い、ターミナルまたはファイルマネージャで行う

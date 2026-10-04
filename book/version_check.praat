@@ -19,5 +19,5 @@ appendInfoLine: "音声分析にはPraat（バージョン", version$,
   ... "; Boersma, Weenink & Shchupak, 2026）を使用した。"
 appendInfoLine: ""
 appendInfoLine: "=== Methods section (English) ==="
-appendInfoLine: "Acoustic analyses were performed using Praat (version", version$,
+appendInfoLine: "Acoustic analyses were performed using Praat (version ", version$,
   ... "; Boersma, Weenink, & Shchupak, 2026)."

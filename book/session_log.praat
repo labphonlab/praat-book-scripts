@@ -7,7 +7,7 @@
 # Copyright (c) 2026 Takeshi Ishihara
 # Released under the MIT License. See LICENSE for details.
 
-procedure dump_session_log: .output_csv$, .pitch_floor, .pitch_ceiling,
+procedure dump_session_log: .output_csv$, .pitch_floor, .pitch_top,
   ... .formant_ceiling, .bw1_threshold, .bw2_threshold, .target_labels$
 
   ; ログファイル名をCSVと同じ場所に生成する
@@ -27,7 +27,7 @@ procedure dump_session_log: .output_csv$, .pitch_floor, .pitch_ceiling,
   appendFileLine: .log$, ""
   appendFileLine: .log$, "--- Analysis Parameters ---"
   appendFileLine: .log$, "pitch_floor:      ", .pitch_floor,     " Hz"
-  appendFileLine: .log$, "pitch_ceiling:    ", .pitch_ceiling,   " Hz"
+  appendFileLine: .log$, "pitch_top:        ", .pitch_top,       " Hz"
   appendFileLine: .log$, "formant_ceiling:  ", .formant_ceiling, " Hz"
   appendFileLine: .log$, "bw1_threshold:    ", .bw1_threshold,   " Hz  (経験則)"
   appendFileLine: .log$, "bw2_threshold:    ", .bw2_threshold,   " Hz  (経験則)"
@@ -41,5 +41,5 @@ procedure dump_session_log: .output_csv$, .pitch_floor, .pitch_ceiling,
 endproc
 
 ; 呼び出し（分析完了後）
-@dump_session_log: output_csv$, pitch_floor, pitch_ceiling,
+@dump_session_log: output_csv$, pitch_floor, pitch_top,
   ... formant_ceiling, bw1_threshold, bw2_threshold, target_labels$
