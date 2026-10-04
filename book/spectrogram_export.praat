@@ -4,9 +4,8 @@
 # 『Praatで学ぶ音声研究の方法』ch16掲載スクリプト
 # https://github.com/labphonlab/praat-book-scripts
 #
-# Copyright (c) 2026 Takeshi Ishihara / 言叢出版
-# 本書の購入者に限り、研究・教育目的での使用および改変を許諾する。
-# 再配布・再公開は不可。詳細は LICENSE を参照。
+# Copyright (c) 2026 Takeshi Ishihara
+# Released under the MIT License. See LICENSE for details.
 
 form Spectrogram Export
   sentence Sound_file    audio/sp01_sentence.wav
@@ -14,8 +13,8 @@ form Spectrogram Export
   real     Window_length  0.005
   real     Dynamic_range  60
   real     Freq_max       8000
-  real     Width_cm       15
-  real     Height_cm       8
+  real     Width_in        6
+  real     Height_in       3.2
   sentence Output_pdf    figures/spectrogram.pdf
 endform
 
@@ -27,25 +26,29 @@ specgram = To Spectrogram: window_length, freq_max, 0.002, 20, "Gaussian"
 Erase all
 Font size: 10
 Line width: 1
-Select outer viewport: 0, width_cm, 0, height_cm
 
-; スペクトログラム本体
+; スペクトログラム本体（上70%）。TextGridと同じviewportに
+; SoundとTextGridを対象にDrawすると、そのウィンドウ独自の
+; 波形＋ティア表示がPaintの上に重なって描かれてしまう（実機で確認済み）。
+; そのためスペクトログラムとTextGridは別々のviewportに分けて描く
+Select outer viewport: 0, width_in, 0, height_in * 0.7
 selectObject: specgram
 Paint: 0, 0, 0, freq_max, 100, "yes", dynamic_range, 6, 0, "no"
-
-; TextGridオーバーレイ表示
-selectObject: sound
-plusObject: tg
-Draw: 0, 0, "yes", "yes", "no"
-
-; 軸・ラベル
 Colour: "black"
 Draw inner box
-Marks bottom every: 1, 0.1, "yes", "yes", "no"
-Text bottom: "yes", "Time (s)"
 Marks left every: 1, 1000, "yes", "yes", "no"
 Text left: "yes", "Frequency (Hz)"
 
+; TextGridオーバーレイ表示（下30%）。TextGrid単体を対象にすることで
+; 余計な波形パネルを描かせない
+Select outer viewport: 0, width_in, height_in * 0.7, height_in
+selectObject: tg
+Draw: 0, 0, "yes", "yes", "no"
+Colour: "black"
+Marks bottom every: 1, 0.1, "yes", "yes", "no"
+Text bottom: "yes", "Time (s)"
+
+Select outer viewport: 0, width_in, 0, height_in
 Save as PDF file: output_pdf$
 appendInfoLine: "保存: ", output_pdf$
 

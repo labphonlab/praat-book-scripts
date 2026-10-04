@@ -4,9 +4,8 @@
 # 『Praatで学ぶ音声研究の方法』ch04掲載スクリプト
 # https://github.com/labphonlab/praat-book-scripts
 #
-# Copyright (c) 2026 Takeshi Ishihara / 言叢出版
-# 本書の購入者に限り、研究・教育目的での使用および改変を許諾する。
-# 再配布・再公開は不可。詳細は LICENSE を参照。
+# Copyright (c) 2026 Takeshi Ishihara
+# Released under the MIT License. See LICENSE for details.
 
 form Spectrogram Export Batch
   sentence Audio_folder    audio/
@@ -45,7 +44,8 @@ for i from 1 to n
     endif
 
     ; --- 描画 ---
-    Select outer viewport: 0, 15, 0, 5
+    ; 幅6インチ × 高さ2インチ（Picture Windowの単位はインチ）
+    Select outer viewport: 0, 6, 0, 2
     Erase all
 
     ; スペクトログラム本体
@@ -77,7 +77,7 @@ for i from 1 to n
     Text left: "yes", "周波数 (Hz)"
 
     ; 出力
-    Select inner viewport: 0, 15, 0, 5
+    Select inner viewport: 0, 6, 0, 2
     Save as PDF file: output_folder$ + stem$ + ".pdf"
     Erase all
 

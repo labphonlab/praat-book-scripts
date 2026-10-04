@@ -4,16 +4,15 @@
 # 『Praatで学ぶ音声研究の方法』Script 16.2掲載スクリプト
 # https://github.com/labphonlab/praat-book-scripts
 #
-# Copyright (c) 2026 Takeshi Ishihara / 言叢出版
-# 本書の購入者に限り、研究・教育目的での使用および改変を許諾する。
-# 再配布・再公開は不可。詳細は LICENSE を参照。
+# Copyright (c) 2026 Takeshi Ishihara
+# Released under the MIT License. See LICENSE for details.
 
 form F0 Trajectory Plot
   sentence Csv_file      results/f0_trajectories.csv
   real     F0_min        50
   real     F0_max        300
-  real     Width_cm      14
-  real     Height_cm      8
+  real     Width_in       5.5
+  real     Height_in      3.2
   sentence Output_file   figures/f0_trajectory.pdf
 endform
 
@@ -23,7 +22,7 @@ n_rows = Get number of rows
 Erase all
 Font size: 11
 Line width: 2
-Select outer viewport: 0, width_cm, 0, height_cm
+Select outer viewport: 0, width_in, 0, height_in
 Axes: 0, 100, f0_min, f0_max
 
 Colour: "black"

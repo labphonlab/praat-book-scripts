@@ -4,9 +4,8 @@
 # 『Praatで学ぶ音声研究の方法』Script 16.2掲載スクリプト
 # https://github.com/labphonlab/praat-book-scripts
 #
-# Copyright (c) 2026 Takeshi Ishihara / 言叢出版
-# 本書の購入者に限り、研究・教育目的での使用および改変を許諾する。
-# 再配布・再公開は不可。詳細は LICENSE を参照。
+# Copyright (c) 2026 Takeshi Ishihara
+# Released under the MIT License. See LICENSE for details.
 
 form Vowel Space Plot
   sentence Csv_file      results/vowels_summary.csv
@@ -14,8 +13,8 @@ form Vowel Space Plot
   real     F1_max        900
   real     F2_min        700
   real     F2_max        2800
-  real     Width_cm      12
-  real     Height_cm     10
+  real     Width_in       5
+  real     Height_in      4
   sentence Output_file   figures/vowel_space.pdf
 endform
 
@@ -26,7 +25,7 @@ n_rows = Get number of rows
 Erase all
 Font size: 13
 Line width: 1.5
-Select outer viewport: 0, width_cm, 0, height_cm
+Select outer viewport: 0, width_in, 0, height_in
 
 ; 軸の方向を音声学慣習に合わせる（F2は左ほど高い、F1は上ほど低い）
 ; 座標軸: x_min, x_max, y_min, y_max

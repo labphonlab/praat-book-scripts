@@ -4,9 +4,8 @@
 # 『Praatで学ぶ音声研究の方法』付録A-35掲載スクリプト
 # https://github.com/labphonlab/praat-book-scripts
 #
-# Copyright (c) 2026 Takeshi Ishihara / 言叢出版
-# 本書の購入者に限り、研究・教育目的での使用および改変を許諾する。
-# 再配布・再公開は不可。詳細は LICENSE を参照。
+# Copyright (c) 2026 Takeshi Ishihara
+# Released under the MIT License. See LICENSE for details.
 
 form Annotated Spectrogram Batch
   sentence Audio_folder /audio/
@@ -28,7 +27,8 @@ for i from 1 to n
   Read from file: audio_folder$ + wavname$
   snd = selected("Sound")
 
-  Select outer viewport: 0, 12, 0, 5
+  ; 幅6インチ × 高さ2.5インチ（Picture Windowの単位はインチ）
+  Select outer viewport: 0, 6, 0, 2.5
   Erase all
 
   selectObject: snd
@@ -45,7 +45,7 @@ for i from 1 to n
     removeObject: tg
   endif
 
-  Select inner viewport: 0, 12, 0, 5
+  Select inner viewport: 0, 6, 0, 2.5
   Save as PDF file: output_folder$ + stem$ + ".pdf"
 
   removeObject: snd
