@@ -8,7 +8,7 @@
 
 ## 正本と刊行時固定版
 
-この公開リポジトリの **main** ブランチをコードの正本とします。書籍に対応する固定版は [v1.0.1 Release](https://github.com/labphonlab/praat-book-scripts/releases/tag/v1.0.1) から取得できます（v1.0.0からの変更は [CHANGELOG.md](CHANGELOG.md) を参照）。ReleaseにはZIPとSHA-256チェックサムを添付します。
+この公開リポジトリの **main** ブランチをコードの正本とします。書籍に対応する固定版は [v1.0.2 Release](https://github.com/labphonlab/praat-book-scripts/releases/tag/v1.0.2) から取得できます（v1.0.0からの変更は [CHANGELOG.md](CHANGELOG.md) を参照）。ReleaseにはZIPとSHA-256チェックサムを添付します。
 
 ## 使い方
 

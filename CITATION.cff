@@ -2,11 +2,11 @@ cff-version: 1.2.0
 title: "Praatで学ぶ音声研究の方法 公開スクリプト集"
 message: "本教材を利用した場合は、対応する書籍とこのソフトウェアを引用してください。"
 type: software
-version: 1.0.1
+version: 1.0.2
 date-released: 2026-10-04
 authors:
   - family-names: Ishihara
     given-names: Takeshi
 license: MIT
 repository-code: "https://github.com/labphonlab/praat-book-scripts"
-url: "https://github.com/labphonlab/praat-book-scripts/releases/tag/v1.0.1"
+url: "https://github.com/labphonlab/praat-book-scripts/releases/tag/v1.0.2"

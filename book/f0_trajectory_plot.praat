@@ -52,7 +52,7 @@ endfor
 Colour: "black"
 Draw inner box
 Marks bottom every: 1, 20, "yes", "yes", "no"
-Text bottom: "yes", "Normalized time (%)"
+Text bottom: "yes", "Normalized time (\% )"
 Marks left every: 1, 50, "yes", "yes", "no"
 Text left: "yes", "F0 (Hz)"
 
